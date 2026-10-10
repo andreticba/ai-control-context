@@ -1,4 +1,4 @@
-<!-- README.md | Atualizado em: 08-10-2026 09:47:06(GMT-04:00) -->
+<!-- README.md | Atualizado em: 09-10-2026 20:01:33(GMT-04:00) -->
 
 # 🧠 Painel de Contexto — ai-control
 
@@ -20,8 +20,8 @@
 ```mermaid
 flowchart TD
   Cloud(("☁️ Git Remoto / Hub"))
-  M_c01fdc4a["💻 ai-control-server-01<br/><i>Treinamento Socrático e Sumário Executivo</i><br/><code>Integrado</code>"]
-  M_c01fdc4a <-->|"08-10-2026 09:45:32(GMT-04:00)"| Cloud
+  M_c01fdc4a["💻 ai-control-server-01<br/><i>specs/001-core-foundations</i><br/><code>Integrado</code>"]
+  M_c01fdc4a <-->|"09-10-2026 19:58:59(GMT-04:00)"| Cloud
   style M_c01fdc4a stroke:#8250df,stroke-width:2px,fill:#fbefff,color:#8250df
   style Cloud stroke:#1a7f37,stroke-width:2px,fill:#dafbe1,color:#1a7f37
 ```
@@ -46,11 +46,11 @@ flowchart TD
   <tbody>
     <tr>
       <td><strong>ai-control-server-01</strong> (<code>c01fdc4a</code>)</td>
-      <td>Treinamento Socrático e Sumário Executivo</td>
+      <td>specs/001-core-foundations</td>
       <td align="center"><img src="https://img.shields.io/badge/-Integrado-purple?style=flat-square" alt="Integrado" /></td>
       <td align="center"><span style="color:green;">●</span> Concluído</td>
-      <td>08-10-2026 09:45:32(GMT-04:00)</td>
-      <td><strong>Nenhum pendente. A base documental e arquitetural (backend) está concluída e formalmente empacotada. O próximo passo dependerá da definição de um novo Épico ou repasse para a equipe/stakeholders.</strong></td>
+      <td>09-10-2026 19:58:59(GMT-04:00)</td>
+      <td><strong>Adequação do core/management/commands/seed_demo.py e criação da primeira versão do frontend para consumo da API.</strong></td>
     </tr>
   </tbody>
 </table>
@@ -60,9 +60,9 @@ flowchart TD
 ## 🎯 Sessão Ativa em Destaque
 
 - **Estação Ativa:** `ai-control-server-01` (`c01fdc4a`)
-- **Tarefa em Execução:** Treinamento Socrático e Sumário Executivo
-- **🎯 Próximo Passo Prioritário (P0):** `Nenhum pendente. A base documental e arquitetural (backend) está concluída e formalmente empacotada. O próximo passo dependerá da definição de um novo Épico ou repasse para a equipe/stakeholders.`
-- **Última Sincronização:** `08-10-2026 09:45:32(GMT-04:00)`
+- **Tarefa em Execução:** specs/001-core-foundations
+- **🎯 Próximo Passo Prioritário (P0):** `Adequação do core/management/commands/seed_demo.py e criação da primeira versão do frontend para consumo da API.`
+- **Última Sincronização:** `09-10-2026 19:58:59(GMT-04:00)`
 
 ---
 
@@ -75,6 +75,7 @@ flowchart TD
 
 | Data / Hora | Estação (ID) | Tarefa Executada | Próximo Passo (P0) |
 | :--- | :--- | :--- | :--- |
+| 09-10-2026 19:58:59(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | specs/001-core-foundations | `Adequação do core/management/commands/seed_demo.py e criação da primeira versão do frontend para consumo da API.` |
 | 08-10-2026 09:45:32(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | Treinamento Socrático e Sumário Executivo | `Nenhum pendente. A base documental e arquitetural (backend) está concluída e formalmente empacotada. O próximo passo dependerá da definição de um novo Épico ou repasse para a equipe/stakeholders.` |
 | 07-10-2026 17:42:23(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | Refatoração RBAC 4-Tier e Unificação de Banco | `Nenhum pendente. Backend arquiteturalmente estabilizado.` |
 | 07-10-2026 17:42:04(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | Refatoração RBAC 4-Tier e Unificação de Banco | `Nenhum pendente. Backend arquiteturalmente estabilizado.` |
