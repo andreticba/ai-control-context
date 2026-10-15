@@ -1,7 +1,7 @@
-<!-- LEARNINGS.md | Atualizado em: 12-10-2026 14:06:24(GMT-04:00) -->
+<!-- LEARNINGS.md | Atualizado em: 15-10-2026 09:19:08(GMT-04:00) -->
 # 💡 Aprendizados Técnicos e Lições Aprendidas Consolidadas
 
-**Data/Hora de Geração:** `12-10-2026 14:06:24(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `15-10-2026 09:19:08(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
 
 ## [PROJETO]
 - **Aprendizado:** 
@@ -35,8 +35,17 @@
 - **Aprendizado:** [PROJETO] Restrição Matricial de Nível de Cargo em BaseMembership: O model valida estritamente job_title.level == SCOPE, impedindo a vinculação de cargos de nível SQUAD diretamente em ProjectMembership.
   - **Racional:** Garante integridade e separação estrita da hierarquia organizacional 4-Tier sem violação das validações do modelo.
   - **Origem:** `ai-control-server-01` | **Data:** 12-10-2026 13:15:34(GMT-04:00)
+- **Aprendizado:** [PROJETO] Em React 19 / Next.js 16 com SSR e Turbopack, a inicialização do TanStack Query exige uma factory singleton (isServer vs browserQueryClient) para prevenir vazamento de estado entre tenants no servidor e recriações indevidas no cliente.
+  - **Racional:** Garante estabilidade no ciclo de vida do QueryClient durante hidratação e evita concorrência multi-tenant no lado do servidor.
+  - **Origem:** `ai-control-server-01` | **Data:** 15-10-2026 08:24:20(GMT-04:00)
+- **Aprendizado:** [PROJETO] Formulários operacionais que expõem IDs numéricos ou UUIDs quebram a usabilidade; o padrão ideal é fornecer endpoints de catálogo e busca contextual (/users/search/, /catalog/roles/, /catalog/job-titles/) com preenchimento assistido de slugs e siglas.
+  - **Racional:** Elimina a barreira de entrada e erros de digitação do usuário final, transferindo a resolução de IDs e UUIDs para a camada de serviço/API.
+  - **Origem:** `ai-control-server-01` | **Data:** 15-10-2026 08:24:20(GMT-04:00)
 
 ## KIT
 - **Aprendizado:** [KIT] Preservação de Padrão de Cabeçalho em Projetos Assistidos: Em repositórios com identidade própria, os carimbos devem manter estritamente a convenção do projeto (# NOME_DO_ARQUIVO | AI-Control v0.0.1 | DATA_HORA (GMT-04:00)), sobrepondo tags genéricas do kit.
   - **Racional:** Mantém a coerência da governança documental local em conformidade com as diretrizes do usuário.
   - **Origem:** `ai-control-server-01` | **Data:** 12-10-2026 13:15:34(GMT-04:00)
+- **Aprendizado:** [KIT] Em bancos relacionais onde papéis e sementes já foram injetados por migrações estruturais, fixtures de teste de integração devem obrigatoriamente utilizar get_or_create(..., defaults={...}) para evitar falhas espúrias de unicidade (UniqueViolation).
+  - **Racional:** Evita falhas falsas-positivas na suíte de testes do pytest ao rodar contra schemas já inicializados.
+  - **Origem:** `ai-control-server-01` | **Data:** 15-10-2026 08:24:20(GMT-04:00)
