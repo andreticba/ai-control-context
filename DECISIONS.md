@@ -1,7 +1,7 @@
-<!-- DECISIONS.md | Atualizado em: 15-10-2026 09:19:08(GMT-04:00) -->
+<!-- DECISIONS.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
 # 🏛️ Decisões de Arquitetura e Governança Consolidadas (ADRs)
 
-**Data/Hora de Geração:** `15-10-2026 09:19:08(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `30-10-2026 18:21:14(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
 
 | ID | Categoria | Decisão | Racional | Máquina | Data |
 |---|---|---|---|---|---|
@@ -13,3 +13,5 @@
 | `e038e238` | `ARQUITETURA` | Adoção de TanStack Query v5 como fonte única da verdade para Server-State com factory SSR e decomposição do monólito page.tsx em 6 componentes puros de apresentação. | Resolve definitivamente o erro de runtime No QueryClient set, isola re-renderizações e viabiliza reatividade instantânea pós-mutação. | `c01fdc4a` | 15-10-2026 08:24:20(GMT-04:00) |
 | `78c21edb` | `ARQUITETURA` | Otimização anti-N+1 em ActiveWorkspacesView com carregamento em lote de departamentos, projetos e squads via __in e agrupamento em memória com complexidade O(1). | Reduz o volume de consultas de 13+ para exatamente 4 queries SQL sob assertion estrita, eliminando travamento relacional. | `c01fdc4a` | 15-10-2026 08:24:20(GMT-04:00) |
 | `46baf5bd` | `PROJETO` | Criação de endpoints de busca de usuários (/api/v1/users/search/) e catálogos dinâmicos (/api/v1/workspaces/catalog/...) com auto-geração de siglas e slugs no frontend. | Humaniza completamente a experiência nos modais de alocação e cadastro 4-Tier, impedindo que o operador precise manipular UUIDs ou códigos brutos. | `c01fdc4a` | 15-10-2026 08:24:20(GMT-04:00) |
+| `8ebb9599` | `ARQUITETURA` | Gestão de leitura reativa no Omnichannel desacoplada via timer perceptivo de 1.5s acoplado ao estado de foco da janela (document.hasFocus() e visibilitychange). | Garante que notificações na barra de tarefas e abas fiquem ativas se a janela estiver fora de foco, só acionando a mutação após assimilação visual humana. | `c01fdc4a` | 30-10-2026 18:20:05(GMT-04:00) |
+| `dfb4233b` | `ARQUITETURA` | Atualização otimista de contadores de mensagens não lidas no cache do React Query em markReadMutation. | Proporciona feedback visual instantâneo na UI eliminando dependência do tempo de resposta da API REST e evitando flickers na barra lateral. | `c01fdc4a` | 30-10-2026 18:20:05(GMT-04:00) |

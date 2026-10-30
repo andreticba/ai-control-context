@@ -1,7 +1,11 @@
-<!-- SESSION_HISTORY.md | Atualizado em: 15-10-2026 09:19:08(GMT-04:00) -->
+<!-- SESSION_HISTORY.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
 # 📜 Histórico Cronológico de Sessões
 
-**Data/Hora de Geração:** `15-10-2026 09:19:08(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `30-10-2026 18:21:14(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+
+### 🕒 30-10-2026 18:20:05(GMT-04:00) — `ai-control-server-01`
+- **Tarefa:** Omnichannel Hardening e Gestão de Leitura com Foco de Janela
+- **Próximo Passo (P0):** `Testes operacionais ponta a ponta no ambiente autenticado com WhatsApp conectado e sincronização no GitHub.`
 
 ### 🕒 15-10-2026 08:24:20(GMT-04:00) — `ai-control-server-01`
 - **Tarefa:** specs/004-full-stack-realignment

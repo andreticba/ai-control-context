@@ -1,7 +1,7 @@
-<!-- LEARNINGS.md | Atualizado em: 15-10-2026 09:19:08(GMT-04:00) -->
+<!-- LEARNINGS.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
 # 💡 Aprendizados Técnicos e Lições Aprendidas Consolidadas
 
-**Data/Hora de Geração:** `15-10-2026 09:19:08(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `30-10-2026 18:21:14(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
 
 ## [PROJETO]
 - **Aprendizado:** 
@@ -41,6 +41,9 @@
 - **Aprendizado:** [PROJETO] Formulários operacionais que expõem IDs numéricos ou UUIDs quebram a usabilidade; o padrão ideal é fornecer endpoints de catálogo e busca contextual (/users/search/, /catalog/roles/, /catalog/job-titles/) com preenchimento assistido de slugs e siglas.
   - **Racional:** Elimina a barreira de entrada e erros de digitação do usuário final, transferindo a resolução de IDs e UUIDs para a camada de serviço/API.
   - **Origem:** `ai-control-server-01` | **Data:** 15-10-2026 08:24:20(GMT-04:00)
+- **Aprendizado:** [PROJETO] Em interfaces de mensageria em tempo real, marcar mensagens como lidas instantaneamente sem checar o foco da janela apaga notificações despercebidas pelo operador; um delay perceptivo (1.5s) somado à verificação de foco garante assimilação da mensagem.
+  - **Racional:** Evita perda de visibilidade operacional quando novas mensagens chegam em conversas abertas enquanto o operador está trabalhando em outra janela.
+  - **Origem:** `ai-control-server-01` | **Data:** 30-10-2026 18:20:05(GMT-04:00)
 
 ## KIT
 - **Aprendizado:** [KIT] Preservação de Padrão de Cabeçalho em Projetos Assistidos: Em repositórios com identidade própria, os carimbos devem manter estritamente a convenção do projeto (# NOME_DO_ARQUIVO | AI-Control v0.0.1 | DATA_HORA (GMT-04:00)), sobrepondo tags genéricas do kit.
@@ -49,3 +52,6 @@
 - **Aprendizado:** [KIT] Em bancos relacionais onde papéis e sementes já foram injetados por migrações estruturais, fixtures de teste de integração devem obrigatoriamente utilizar get_or_create(..., defaults={...}) para evitar falhas espúrias de unicidade (UniqueViolation).
   - **Racional:** Evita falhas falsas-positivas na suíte de testes do pytest ao rodar contra schemas já inicializados.
   - **Origem:** `ai-control-server-01` | **Data:** 15-10-2026 08:24:20(GMT-04:00)
+- **Aprendizado:** [KIT] Em testes assíncronos do Django Channels com Pytest, mocks de Channel Layer (group_send) devem ser instanciados com AsyncMock() em vez de MagicMock() para compatibilidade estrita com corrotinas Python 3.14.
+  - **Racional:** Previne exceções TypeError: 'MagicMock' object can't be awaited em cenários de despacho de mensagens WebSockets assíncronas.
+  - **Origem:** `ai-control-server-01` | **Data:** 30-10-2026 18:20:05(GMT-04:00)
