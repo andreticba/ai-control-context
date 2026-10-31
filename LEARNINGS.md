@@ -1,7 +1,7 @@
-<!-- LEARNINGS.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
+<!-- LEARNINGS.md | Atualizado em: 31-10-2026 08:53:45(GMT-04:00) -->
 # 💡 Aprendizados Técnicos e Lições Aprendidas Consolidadas
 
-**Data/Hora de Geração:** `30-10-2026 18:21:14(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `31-10-2026 08:53:45(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
 
 ## [PROJETO]
 - **Aprendizado:** 
@@ -44,6 +44,9 @@
 - **Aprendizado:** [PROJETO] Em interfaces de mensageria em tempo real, marcar mensagens como lidas instantaneamente sem checar o foco da janela apaga notificações despercebidas pelo operador; um delay perceptivo (1.5s) somado à verificação de foco garante assimilação da mensagem.
   - **Racional:** Evita perda de visibilidade operacional quando novas mensagens chegam em conversas abertas enquanto o operador está trabalhando em outra janela.
   - **Origem:** `ai-control-server-01` | **Data:** 30-10-2026 18:20:05(GMT-04:00)
+- **Aprendizado:** [PROJETO] No ecossistema Django/Pytest, a coexistência de um arquivo 'app/tests.py' com um pacote de testes 'app/tests/' provoca colisão fatal 'import file mismatch' durante a coleta global de testes.
+  - **Racional:** Garante que o comando global pytest execute a suíte completa de testes (130 testes) de forma atômica e unificada sem interrupções.
+  - **Origem:** `ai-control-server-01` | **Data:** 31-10-2026 08:52:10(GMT-04:00)
 
 ## KIT
 - **Aprendizado:** [KIT] Preservação de Padrão de Cabeçalho em Projetos Assistidos: Em repositórios com identidade própria, os carimbos devem manter estritamente a convenção do projeto (# NOME_DO_ARQUIVO | AI-Control v0.0.1 | DATA_HORA (GMT-04:00)), sobrepondo tags genéricas do kit.
@@ -55,3 +58,6 @@
 - **Aprendizado:** [KIT] Em testes assíncronos do Django Channels com Pytest, mocks de Channel Layer (group_send) devem ser instanciados com AsyncMock() em vez de MagicMock() para compatibilidade estrita com corrotinas Python 3.14.
   - **Racional:** Previne exceções TypeError: 'MagicMock' object can't be awaited em cenários de despacho de mensagens WebSockets assíncronas.
   - **Origem:** `ai-control-server-01` | **Data:** 30-10-2026 18:20:05(GMT-04:00)
+- **Aprendizado:** [KIT] No Next.js 16 (16.4.2), o comando 'next lint' foi removido do core CLI do framework e passa a interpretar o termo 'lint' como argumento de diretório; scripts de lint no package.json devem adotar 'tsc --noEmit' ou chamada explícita ao 'eslint'.
+  - **Racional:** Evita falhas de build e erro 'Invalid project directory provided: .../frontend/lint' em esteiras de CI/CD automatizadas.
+  - **Origem:** `ai-control-server-01` | **Data:** 31-10-2026 08:52:10(GMT-04:00)

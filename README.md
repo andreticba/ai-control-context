@@ -1,4 +1,4 @@
-<!-- README.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
+<!-- README.md | Atualizado em: 31-10-2026 08:53:45(GMT-04:00) -->
 
 # 🧠 Painel de Contexto — ai-control
 
@@ -20,8 +20,8 @@
 ```mermaid
 flowchart TD
   Cloud(("☁️ Git Remoto / Hub"))
-  M_c01fdc4a["💻 ai-control-server-01<br/><i>Omnichannel Hardening e Gestão de Leitura com Foco de Janela</i><br/><code>Integrado</code>"]
-  M_c01fdc4a <-->|"30-10-2026 18:20:05(GMT-04:00)"| Cloud
+  M_c01fdc4a["💻 ai-control-server-01<br/><i>Release v0.2.0 e Estabilização da Suíte de Testes</i><br/><code>Integrado</code>"]
+  M_c01fdc4a <-->|"31-10-2026 08:52:10(GMT-04:00)"| Cloud
   style M_c01fdc4a stroke:#8250df,stroke-width:2px,fill:#fbefff,color:#8250df
   style Cloud stroke:#1a7f37,stroke-width:2px,fill:#dafbe1,color:#1a7f37
 ```
@@ -46,11 +46,11 @@ flowchart TD
   <tbody>
     <tr>
       <td><strong>ai-control-server-01</strong> (<code>c01fdc4a</code>)</td>
-      <td>Omnichannel Hardening e Gestão de Leitura com Foco de Janela</td>
+      <td>Release v0.2.0 e Estabilização da Suíte de Testes</td>
       <td align="center"><img src="https://img.shields.io/badge/-Integrado-purple?style=flat-square" alt="Integrado" /></td>
       <td align="center"><span style="color:green;">●</span> Concluído</td>
-      <td>30-10-2026 18:20:05(GMT-04:00)</td>
-      <td><strong>Testes operacionais ponta a ponta no ambiente autenticado com WhatsApp conectado e sincronização no GitHub.</strong></td>
+      <td>31-10-2026 08:52:10(GMT-04:00)</td>
+      <td><strong>Estruturar pipeline de ingestão e processamento de documentos (RAG) para subsidiar respostas autônomas da IA via WhatsApp.</strong></td>
     </tr>
   </tbody>
 </table>
@@ -60,9 +60,9 @@ flowchart TD
 ## 🎯 Sessão Ativa em Destaque
 
 - **Estação Ativa:** `ai-control-server-01` (`c01fdc4a`)
-- **Tarefa em Execução:** Omnichannel Hardening e Gestão de Leitura com Foco de Janela
-- **🎯 Próximo Passo Prioritário (P0):** `Testes operacionais ponta a ponta no ambiente autenticado com WhatsApp conectado e sincronização no GitHub.`
-- **Última Sincronização:** `30-10-2026 18:20:05(GMT-04:00)`
+- **Tarefa em Execução:** Release v0.2.0 e Estabilização da Suíte de Testes
+- **🎯 Próximo Passo Prioritário (P0):** `Estruturar pipeline de ingestão e processamento de documentos (RAG) para subsidiar respostas autônomas da IA via WhatsApp.`
+- **Última Sincronização:** `31-10-2026 08:52:10(GMT-04:00)`
 
 ---
 
@@ -75,6 +75,7 @@ flowchart TD
 
 | Data / Hora | Estação (ID) | Tarefa Executada | Próximo Passo (P0) |
 | :--- | :--- | :--- | :--- |
+| 31-10-2026 08:52:10(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | Release v0.2.0 e Estabilização da Suíte de Testes | `Estruturar pipeline de ingestão e processamento de documentos (RAG) para subsidiar respostas autônomas da IA via WhatsApp.` |
 | 30-10-2026 18:20:05(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | Omnichannel Hardening e Gestão de Leitura com Foco de Janela | `Testes operacionais ponta a ponta no ambiente autenticado com WhatsApp conectado e sincronização no GitHub.` |
 | 15-10-2026 08:24:20(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | specs/004-full-stack-realignment | `Testes funcionais de ponta a ponta na interface autenticada e avanço para integração do canal Omnichannel (WhatsApp Baileys / Evolution API).` |
 | 12-10-2026 13:15:34(GMT-04:00) | `ai-control-server-01 (c01fdc4a)` | specs/002-frontend-seed | `Construção dos formulários no Frontend (Next.js 16) para permitir adicionar e editar os dados da organização, projetos, squads e departamentos.` |
@@ -91,6 +92,7 @@ flowchart TD
 
 | Máquina (ID) | Decisão Arquitetural | Impacto / Racional |
 | :--- | :--- | :--- |
+| `c01fdc4a` | **[7d2a07a6]** `ARQUITETURA` Unificação estrita da suíte de testes com remoção de arquivos legados de testes isolados e padronização do lint do frontend em tsc --noEmit. | Garante conformidade com o Next.js 16 e execução contínua de 100% dos testes da aplicação em comando único. |
 | `c01fdc4a` | **[dfb4233b]** `ARQUITETURA` Atualização otimista de contadores de mensagens não lidas no cache do React Query em markReadMutation. | Proporciona feedback visual instantâneo na UI eliminando dependência do tempo de resposta da API REST e evitando flickers na barra lateral. |
 | `c01fdc4a` | **[8ebb9599]** `ARQUITETURA` Gestão de leitura reativa no Omnichannel desacoplada via timer perceptivo de 1.5s acoplado ao estado de foco da janela (document.hasFocus() e visibilitychange). | Garante que notificações na barra de tarefas e abas fiquem ativas se a janela estiver fora de foco, só acionando a mutação após assimilação visual humana. |
 | `c01fdc4a` | **[46baf5bd]** `PROJETO` Criação de endpoints de busca de usuários (/api/v1/users/search/) e catálogos dinâmicos (/api/v1/workspaces/catalog/...) com auto-geração de siglas e slugs no frontend. | Humaniza completamente a experiência nos modais de alocação e cadastro 4-Tier, impedindo que o operador precise manipular UUIDs ou códigos brutos. |
@@ -100,7 +102,6 @@ flowchart TD
 | `c01fdc4a` | **[a50b3792]** `ARQUITETURA` Autenticação JWT Stateless com interceptor Axios resiliente (fila assíncrona isRefreshing). | Evita corrida de concorrência em requisições paralelas durante a expiração do token de acesso, mantendo a navegação do usuário contínua. |
 | `c01fdc4a` | **[988450cd]** `[ARQUITETURA]` Uso de blocos 'collapsible' (<details>) do Markdown Socrático. | Emula a dinâmica socrática, forçando o desenvolvedor (usuário final) a raciocinar sobre os Post-Mortems de arquitetura antes de visualizar a solução da equipe. |
 | `c01fdc4a` | **[3e834ed9]** `[ARQUITETURA]` Armazenamento dos Manuais de Negócios e Treinamento estritamente no repositório Git (Não exposto publicamente). | Evita a exposição acidental em portais estáticos inseguros (MkDocs) de documentos que contêm estratégias de engenharia e regras sensíveis de RBAC do sistema. |
-| `c01fdc4a` | **[af47736b]** `[ARCH]` Implementação do RBAC Hierárquico 4-Tier atrelado aos Documentos de RAG, usando slugs de permissão em vez de roles textuais fixas no Middleware. | Registro defasado |
 </details>
 
 <details>

@@ -1,7 +1,11 @@
-<!-- SESSION_HISTORY.md | Atualizado em: 30-10-2026 18:21:14(GMT-04:00) -->
+<!-- SESSION_HISTORY.md | Atualizado em: 31-10-2026 08:53:45(GMT-04:00) -->
 # 📜 Histórico Cronológico de Sessões
 
-**Data/Hora de Geração:** `30-10-2026 18:21:14(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+**Data/Hora de Geração:** `31-10-2026 08:53:45(GMT-04:00)` | **Fuso Horário:** America/Cuiaba `(GMT-04:00)`
+
+### 🕒 31-10-2026 08:52:10(GMT-04:00) — `ai-control-server-01`
+- **Tarefa:** Release v0.2.0 e Estabilização da Suíte de Testes
+- **Próximo Passo (P0):** `Estruturar pipeline de ingestão e processamento de documentos (RAG) para subsidiar respostas autônomas da IA via WhatsApp.`
 
 ### 🕒 30-10-2026 18:20:05(GMT-04:00) — `ai-control-server-01`
 - **Tarefa:** Omnichannel Hardening e Gestão de Leitura com Foco de Janela
